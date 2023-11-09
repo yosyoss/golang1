@@ -13,12 +13,12 @@ func main() {
 	bobotUTS := 0.30
 	bobotUAS := 0.40
 
-	nilaiAbsensi := float64(absensi) * bobotAbsensi
+	nilaiAbsensi := (float64(absensi) / float64(18) * 100) * bobotAbsensi
 	nilaiTugasHarian := float64(tugasHarian) * bobotTugasHarian
 	nilaiUTS := float64(uts) * bobotUTS
 	nilaiUAS := float64(uas) * bobotUAS
 
 	nilaiTotal := nilaiAbsensi + nilaiTugasHarian + nilaiUTS + nilaiUAS
 
-	fmt.Printf("%.2f", nilaiTotal)
+	fmt.Printf("Nilai total untuk Apip adalah %.2f\n", nilaiTotal)
 }
